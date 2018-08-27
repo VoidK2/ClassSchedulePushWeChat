@@ -37,4 +37,10 @@ stuID: 用户学号
 stuName: 用户姓名
 
 stuClass: 用户班级对应英文名(关联ClassIndex.classEN)
+
 stuOpenID: 微信后台的用户ID
+
+## RegisteredLog
+stuID: 学生学号
+
+regTime: 注册时间
