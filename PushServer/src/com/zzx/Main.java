@@ -50,6 +50,9 @@ public class Main extends Thread{
             msgPush.init();
             msgPush.setOpenID(meA[i].getOpenID());
             msgPush.setTemplateID(templateID);
+            msgPush.setName1("keyword1");
+            msgPush.setValue1(meA[i].getClassname());
+            msgPush.setColor1("#173177");
 
             msgPush.run();
         }

@@ -3,6 +3,7 @@ package com.zzx;
 import me.chanjar.weixin.mp.api.WxMpInMemoryConfigStorage;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.api.impl.WxMpServiceImpl;
+import me.chanjar.weixin.mp.bean.template.WxMpTemplate;
 import me.chanjar.weixin.mp.bean.template.WxMpTemplateData;
 import me.chanjar.weixin.mp.bean.template.WxMpTemplateMessage;
 
@@ -30,6 +31,7 @@ public class MsgPush extends Thread{
                 .templateId(templateID)
                 .url("http://weixin.qq.com/download")
                 .build();
+
         templateMessage.addData(new WxMpTemplateData(name1, value1, color1));
         templateMessage.addData(new WxMpTemplateData(name2, value2, color2));
         wxService.getTemplateMsgService().sendTemplateMsg(templateMessage);
