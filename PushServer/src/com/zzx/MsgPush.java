@@ -10,12 +10,11 @@ public class MsgPush extends Thread{
     private WxMpService wxService = new WxMpServiceImpl();
     private String OpenID;
     private String templateID;
-    private String url;
     private String name1,value1,color1;
     private String name2,value2,color2;
 
 
-    public void init()throws Exception{
+    public void init(){
         WxMpInMemoryConfigStorage config = new WxMpInMemoryConfigStorage();
         config.setAppId("..."); // 设置微信公众号的appid
         config.setSecret("..."); // 设置微信公众号的app corpSecret
@@ -29,7 +28,7 @@ public class MsgPush extends Thread{
         WxMpTemplateMessage templateMessage = WxMpTemplateMessage.builder()
                 .toUser(OpenID)
                 .templateId(templateID)
-                .url(url)
+                .url("http://weixin.qq.com/download")
                 .build();
         templateMessage.addData(new WxMpTemplateData(name1, value1, color1));
         templateMessage.addData(new WxMpTemplateData(name2, value2, color2));
@@ -50,10 +49,6 @@ public class MsgPush extends Thread{
 
     public void setTemplateID(String templateID) {
         this.templateID = templateID;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 
     public void setName1(String name1) {

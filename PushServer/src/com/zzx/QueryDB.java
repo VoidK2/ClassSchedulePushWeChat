@@ -1,10 +1,8 @@
 package com.zzx;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
-public class QueryDB
+public class QueryDB{
     private Connection conn;
     private Statement stmt;
     public ResultSet rs,rs2 = null;
@@ -27,20 +25,28 @@ public class QueryDB
             e.printStackTrace();
         }
     }
-    public void QueryByUser(String sql) throws Exception {
+    public int QueryByUser(String sql,MsgEntity[] meA) throws Exception {
         rs = stmt.executeQuery(sql);
-        List<MsgEntity> msgEntityList = new ArrayList<MsgEntity>();
+        int n=0;
         MsgEntity mg1 = new MsgEntity();
         while(rs.next()){
             mg1.setOpenID(rs.getString("OpenID"));
-            msgEntityList.add(mg1);
+            String sql2 = String.format("select name,place,teacher,etime,stime from %s",
+                    rs.getString("stuClass"));
+            rs2 = stmt.executeQuery(sql2);
+            while(rs2.next()){
+                mg1.setClassname(rs2.getString("name"));
+                mg1.setPlace(rs2.getString("place"));
+                mg1.setTeacher(rs2.getString("teacher"));
+                mg1.setEtime(rs2.getInt("etime"));
+                mg1.setStime(rs2.getInt("stime"));
+            }
+            meA[++n]=mg1;
         }
-        for(MsgEntity msgEntity:msgEntityList){
-            System.out.println(msgEntity.getOpenID());
-        }
+        if(rs!=null)rs.close();
+        if(rs2!=null)rs.close();
+        if(stmt!=null)stmt.close();
+        if(conn!=null)conn.close();
+        return n-1;
     }
-    public void QueryByClass(String sql) throws Exception{
-        rs2 = stmt.executeQuery(sql);
-    }
-
 }
