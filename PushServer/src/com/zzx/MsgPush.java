@@ -1,5 +1,6 @@
 package com.zzx;
 
+import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpInMemoryConfigStorage;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.api.impl.WxMpServiceImpl;
@@ -8,7 +9,7 @@ import me.chanjar.weixin.mp.bean.template.WxMpTemplateData;
 import me.chanjar.weixin.mp.bean.template.WxMpTemplateMessage;
 
 public class MsgPush extends Thread{
-    private WxMpService wxService = new WxMpServiceImpl();
+    private WxMpService wxService;
     private String OpenID;
     private String templateID;
     private String name1,value1,color1;
@@ -17,12 +18,13 @@ public class MsgPush extends Thread{
 
     public void init(){
         WxMpInMemoryConfigStorage config = new WxMpInMemoryConfigStorage();
-        config.setAppId("..."); // 设置微信公众号的appid
-        config.setSecret("..."); // 设置微信公众号的app corpSecret
-        config.setToken("..."); // 设置微信公众号的token
-        config.setAesKey("..."); // 设置微信公众号的EncodingAESKey
+        config.setAppId("wxebf2b7d3b6bf3fa2"); // 设置微信公众号的appid
+        config.setSecret("65b42281fe6648765adaf04b8ed6ad8a"); // 设置微信公众号的app corpSecret
+        config.setToken("zhangzexin1"); // 设置微信公众号的token
+//        config.setAesKey("..."); // 设置微信公众号的EncodingAESKey
 
         // 实际项目中请注意要保持单例，不要在每次请求时构造实例，具体可以参考demo项目
+        wxService = new WxMpServiceImpl();
         wxService.setWxMpConfigStorage(config);
     }
     public void run(){
@@ -34,7 +36,11 @@ public class MsgPush extends Thread{
 
         templateMessage.addData(new WxMpTemplateData(name1, value1, color1));
         templateMessage.addData(new WxMpTemplateData(name2, value2, color2));
-        wxService.getTemplateMsgService().sendTemplateMsg(templateMessage);
+        try {
+            wxService.getTemplateMsgService().sendTemplateMsg(templateMessage);
+        } catch (WxErrorException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setName2(String name2) {
