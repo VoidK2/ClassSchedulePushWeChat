@@ -5,7 +5,7 @@
 
 classCN: 班级中文名
 
-classEN: 班级英文名
+classNU: 班级编号
 
 ## 普表
 > 记录详细的课表信息
@@ -36,7 +36,7 @@ stuID: 用户学号
 
 stuName: 用户姓名
 
-stuClass: 用户班级对应英文名(关联ClassIndex.classEN)
+stuClass: 用户班级对应英文名(关联ClassIndex.classNU)
 
 stuOpenID: 微信后台的用户ID
 
