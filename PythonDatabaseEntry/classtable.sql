@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : alicentos
+Source Server         : centos
 Source Server Version : 50723
 Source Host           : 39.108.90.113:3306
 Source Database       : classtable
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50723
 File Encoding         : 65001
 
-Date: 2018-09-10 12:34:54
+Date: 2018-09-18 20:51:14
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -175,7 +175,7 @@ CREATE TABLE `1504091` (
   `place` varchar(255) DEFAULT NULL,
   `teacher` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ctid`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of 1504091
@@ -457,6 +457,47 @@ INSERT INTO `160409` VALUES ('19', '科技文献检索', '14', '5', '6', '5', '3
 INSERT INTO `160409` VALUES ('20', '科技文献检索', '16', '7', '8', '5', '7', '8', '35-612', '刘原');
 
 -- ----------------------------
+-- Table structure for 1604091
+-- ----------------------------
+DROP TABLE IF EXISTS `1604091`;
+CREATE TABLE `1604091` (
+  `ctid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `shour` int(255) DEFAULT NULL,
+  `stime` int(11) DEFAULT NULL,
+  `etime` int(11) DEFAULT NULL,
+  `week` int(255) DEFAULT NULL,
+  `sweek` int(255) DEFAULT NULL,
+  `eweek` int(255) DEFAULT NULL,
+  `place` varchar(255) DEFAULT NULL,
+  `teacher` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ctid`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of 1604091
+-- ----------------------------
+INSERT INTO `1604091` VALUES ('1', '操作系统', '8', '1', '2', '1', '8', '18', '36-204', '屠菁');
+INSERT INTO `1604091` VALUES ('2', 'JavaEE技术', '10', '3', '4', '1', '11', '18', '36-204', '许强');
+INSERT INTO `1604091` VALUES ('3', '计算方法', '14', '5', '6', '1', '3', '14', '36-1JT', '谢进');
+INSERT INTO `1604091` VALUES ('4', '计算机组成与结构', '16', '7', '8', '1', '3', '16', '36-210', '张向东');
+INSERT INTO `1604091` VALUES ('5', '操作系统', '8', '1', '2', '2', '13', '18', '36-606', '崔海莉');
+INSERT INTO `1604091` VALUES ('6', '软件分析与设计', '10', '3', '4', '2', '3', '11', '36-204', '张家锐');
+INSERT INTO `1604091` VALUES ('7', '计算方法', '8', '1', '2', '3', '3', '14', '36-1-JT', '谢进');
+INSERT INTO `1604091` VALUES ('8', '操作系统', '10', '3', '4', '3', '8', '18', '36-204', '屠菁');
+INSERT INTO `1604091` VALUES ('9', '计算机组成与结构', '14', '5', '6', '3', '12', '16', '36-401', '刘洁群');
+INSERT INTO `1604091` VALUES ('10', '软件分析与设计', '14', '5', '6', '3', '4', '11', '36-608', '张家锐');
+INSERT INTO `1604091` VALUES ('11', '计算机组成与结构', '16', '7', '8', '3', '15', '16', '36-401', '刘洁群');
+INSERT INTO `1604091` VALUES ('12', 'JavaEE技术', '8', '1', '2', '4', '11', '17', '36-204', '许强');
+INSERT INTO `1604091` VALUES ('13', '计算机组成与结构', '10', '3', '4', '4', '3', '16', '36-204', '张向东');
+INSERT INTO `1604091` VALUES ('14', 'JavaEE技术', '14', '5', '6', '4', '12', '18', '36-610', '夏竹青');
+INSERT INTO `1604091` VALUES ('15', '软件分析与设计', '14', '5', '6', '4', '3', '11', '36-204', '张家锐');
+INSERT INTO `1604091` VALUES ('16', '软件分析与设计', '16', '7', '8', '4', '4', '12', '36-608', '张家锐');
+INSERT INTO `1604091` VALUES ('17', 'JavaEE技术', '8', '1', '2', '5', '12', '17', '36-610', '夏竹青');
+INSERT INTO `1604091` VALUES ('18', '科技文献检索', '8', '1', '2', '5', '7', '8', '35-612', '刘原');
+INSERT INTO `1604091` VALUES ('19', '科技文献检索', '10', '3', '4', '5', '3', '8', '36-204', '刘原');
+
+-- ----------------------------
 -- Table structure for 1604092
 -- ----------------------------
 DROP TABLE IF EXISTS `1604092`;
@@ -541,47 +582,6 @@ INSERT INTO `1604093` VALUES ('19', '科技文献检索', '14', '5', '6', '5', '
 INSERT INTO `1604093` VALUES ('20', '科技文献检索', '16', '7', '8', '5', '7', '8', '35-612', '刘原');
 
 -- ----------------------------
--- Table structure for 1604094
--- ----------------------------
-DROP TABLE IF EXISTS `1604094`;
-CREATE TABLE `1604094` (
-  `ctid` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `shour` int(255) DEFAULT NULL,
-  `stime` int(11) DEFAULT NULL,
-  `etime` int(11) DEFAULT NULL,
-  `week` int(255) DEFAULT NULL,
-  `sweek` int(255) DEFAULT NULL,
-  `eweek` int(255) DEFAULT NULL,
-  `place` varchar(255) DEFAULT NULL,
-  `teacher` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ctid`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of 1604094
--- ----------------------------
-INSERT INTO `1604094` VALUES ('1', '操作系统', '8', '1', '2', '1', '8', '18', '36-204', '屠菁');
-INSERT INTO `1604094` VALUES ('2', 'JavaEE技术', '10', '3', '4', '1', '11', '18', '36-204', '许强');
-INSERT INTO `1604094` VALUES ('3', '计算方法', '14', '5', '6', '1', '3', '14', '36-1JT', '谢进');
-INSERT INTO `1604094` VALUES ('4', '计算机组成与结构', '16', '7', '8', '1', '3', '16', '36-210', '张向东');
-INSERT INTO `1604094` VALUES ('5', '操作系统', '8', '1', '2', '2', '13', '18', '36-606', '崔海莉');
-INSERT INTO `1604094` VALUES ('6', '软件分析与设计', '10', '3', '4', '2', '3', '11', '36-204', '张家锐');
-INSERT INTO `1604094` VALUES ('7', '计算方法', '8', '1', '2', '3', '3', '14', '36-1-JT', '谢进');
-INSERT INTO `1604094` VALUES ('8', '操作系统', '10', '3', '4', '3', '8', '18', '36-204', '屠菁');
-INSERT INTO `1604094` VALUES ('9', '计算机组成与结构', '14', '5', '6', '3', '12', '16', '36-401', '刘洁群');
-INSERT INTO `1604094` VALUES ('10', '软件分析与设计', '14', '5', '6', '3', '4', '11', '36-608', '张家锐');
-INSERT INTO `1604094` VALUES ('11', '计算机组成与结构', '16', '7', '8', '3', '15', '16', '36-401', '刘洁群');
-INSERT INTO `1604094` VALUES ('12', 'JavaEE技术', '8', '1', '2', '4', '11', '17', '36-204', '许强');
-INSERT INTO `1604094` VALUES ('13', '计算机组成与结构', '10', '3', '4', '4', '3', '16', '36-204', '张向东');
-INSERT INTO `1604094` VALUES ('14', 'JavaEE技术', '14', '5', '6', '4', '12', '18', '36-610', '夏竹青');
-INSERT INTO `1604094` VALUES ('15', '软件分析与设计', '14', '5', '6', '4', '3', '11', '36-204', '张家锐');
-INSERT INTO `1604094` VALUES ('16', '软件分析与设计', '16', '7', '8', '4', '4', '12', '36-608', '张家锐');
-INSERT INTO `1604094` VALUES ('17', 'JavaEE技术', '8', '1', '2', '5', '12', '17', '36-610', '夏竹青');
-INSERT INTO `1604094` VALUES ('18', '科技文献检索', '8', '1', '2', '5', '7', '8', '35-612', '刘原');
-INSERT INTO `1604094` VALUES ('19', '科技文献检索', '10', '3', '4', '5', '3', '8', '36-204', '刘原');
-
--- ----------------------------
 -- Table structure for 1604101
 -- ----------------------------
 DROP TABLE IF EXISTS `1604101`;
@@ -642,15 +642,14 @@ CREATE TABLE `1704011` (
 INSERT INTO `1704011` VALUES ('1', '数字电子技术试验', '8', '1', '2', '1', '11', '18', '42-501', '董海燕');
 INSERT INTO `1704011` VALUES ('2', '数字逻辑', '14', '5', '6', '1', '3', '16', '36-105', '龙夏');
 INSERT INTO `1704011` VALUES ('3', '大学物理B', '16', '7', '8', '1', '3', '16', '35-406', '盛建军');
-INSERT INTO `1704011` VALUES ('4', '面向对象程序设计(A教学班)', '8', '1', '2', '2', '13', '16', '36-408', '吴瀛');
+INSERT INTO `1704011` VALUES ('4', '面向对象程序设计(A教学班)', '14', '5', '6', '2', '5', '18', '36-408', '吴瀛');
 INSERT INTO `1704011` VALUES ('5', '离散数学', '10', '3', '4', '2', '3', '16', '36-105', '胡萍');
-INSERT INTO `1704011` VALUES ('6', '面向对象程序设计', '14', '5', '6', '2', '7', '16', '36-408', '吴瀛');
 INSERT INTO `1704011` VALUES ('7', '大学物理B', '10', '3', '4', '3', '3', '16', '35-406', '盛建军');
 INSERT INTO `1704011` VALUES ('8', '数字逻辑', '14', '5', '6', '3', '3', '16', '36-105', '龙夏');
 INSERT INTO `1704011` VALUES ('9', '大学物理B', '14', '5', '6', '4', '15', '18', '37-604', '王向川');
 INSERT INTO `1704011` VALUES ('10', '离散数学', '14', '5', '6', '4', '3', '14', '36-105', '胡萍');
 INSERT INTO `1704011` VALUES ('11', '大学物理B', '16', '7', '8', '4', '15', '18', '37-604', '王向川');
-INSERT INTO `1704011` VALUES ('12', '面向对象程序设计', '18', '9', '10', '4', '3', '16', '36-201', '吴瀛');
+INSERT INTO `1704011` VALUES ('12', '面向对象程序设计', '18', '9', '10', '2', '3', '16', '36-201', '吴瀛');
 INSERT INTO `1704011` VALUES ('13', '离散数学', '8', '1', '2', '5', '15', '16', '36-105', '胡萍');
 INSERT INTO `1704011` VALUES ('14', '离散数学', '10', '3', '4', '5', '13', '16', '36-408', '张琛');
 INSERT INTO `1704011` VALUES ('15', '离散数学', '10', '3', '4', '5', '3', '6', '36-105', '胡萍');
@@ -672,7 +671,7 @@ CREATE TABLE `1704012` (
   `place` varchar(255) DEFAULT NULL,
   `teacher` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ctid`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of 1704012
@@ -681,7 +680,7 @@ INSERT INTO `1704012` VALUES ('1', '数字电子技术试验', '10', '3', '4', '
 INSERT INTO `1704012` VALUES ('2', '数字逻辑', '14', '5', '6', '1', '3', '16', '36-105', '龙夏');
 INSERT INTO `1704012` VALUES ('3', '大学物理B', '16', '7', '8', '1', '3', '16', '35-406', '盛建军');
 INSERT INTO `1704012` VALUES ('4', '离散数学', '10', '3', '4', '2', '3', '16', '36-105', '胡萍');
-INSERT INTO `1704012` VALUES ('5', '面向对象程序设计', '16', '7', '8', '2', '7', '16', '36-606', '吴瀛');
+INSERT INTO `1704012` VALUES ('5', '面向对象程序设计', '16', '7', '8', '2', '5', '16', '36-606', '吴瀛');
 INSERT INTO `1704012` VALUES ('6', '大学物理B', '10', '3', '4', '3', '3', '16', '35-406', '盛建军');
 INSERT INTO `1704012` VALUES ('7', '数字逻辑', '14', '5', '6', '3', '3', '16', '36-105', '龙夏');
 INSERT INTO `1704012` VALUES ('8', '离散数学', '8', '1', '2', '4', '13', '16', '36-408', '张琛');
@@ -689,10 +688,11 @@ INSERT INTO `1704012` VALUES ('9', '面向对象程序设计', '10', '3', '4', '
 INSERT INTO `1704012` VALUES ('10', '大学物理B', '14', '5', '6', '4', '15', '18', '37-601', '程玮');
 INSERT INTO `1704012` VALUES ('11', '离散数学', '14', '5', '6', '4', '3', '14', '36-105', '胡萍');
 INSERT INTO `1704012` VALUES ('12', '大学物理B', '16', '7', '8', '4', '15', '18', '37-601', '程玮');
-INSERT INTO `1704012` VALUES ('13', '面向对象程序设计', '18', '9', '10', '4', '3', '16', '36-201', '吴瀛');
+INSERT INTO `1704012` VALUES ('13', '面向对象程序设计', '18', '9', '10', '2', '3', '16', '36-201', '吴瀛');
 INSERT INTO `1704012` VALUES ('14', '离散数学', '8', '1', '2', '5', '15', '16', '36-105', '胡萍');
 INSERT INTO `1704012` VALUES ('15', '离散数学', '10', '3', '4', '5', '3', '6', '36-105', '胡萍');
-INSERT INTO `1704012` VALUES ('16', '中国近现代史纲要', '14', '5', '6', null, '3', '19', '35-401', '蔡传斌');
+INSERT INTO `1704012` VALUES ('16', '中国近现代史纲要', '14', '5', '6', '5', '3', '19', '35-401', '蔡传斌');
+INSERT INTO `1704012` VALUES ('33', '面向对象程序设计', '16', '7', '8', '2', '17', '18', '36机房', '吴瀛');
 
 -- ----------------------------
 -- Table structure for 1704031
@@ -795,14 +795,14 @@ CREATE TABLE `1704091` (
 -- ----------------------------
 INSERT INTO `1704091` VALUES ('1', '离散结构', '8', '1', '2', '1', '3', '18', '35-406', '华珊珊');
 INSERT INTO `1704091` VALUES ('2', '离散结构', '10', '3', '4', '1', '15', '18', '36-403', '华珊珊');
-INSERT INTO `1704091` VALUES ('3', '大学物理B', '12', '5', '6', '1', '3', '16', '35-401', '盛建军');
-INSERT INTO `1704091` VALUES ('4', '电路与数字系统I', '14', '7', '8', '1', '3', '18', '35-409', '刘振华');
+INSERT INTO `1704091` VALUES ('3', '大学物理B', '14', '5', '6', '1', '3', '16', '35-401', '盛建军');
+INSERT INTO `1704091` VALUES ('4', '电路与数字系统I', '14', '5', '6', '2', '3', '18', '35-212', '吴剑威');
 INSERT INTO `1704091` VALUES ('5', '数据结构与算法', '10', '3', '4', '2', '3', '18', '36-3JT', '李红');
 INSERT INTO `1704091` VALUES ('6', '电路与模拟电子技术实验', '10', '3', '4', '3', '9', '16', '42-505', '杨特育/董海燕');
 INSERT INTO `1704091` VALUES ('7', '大学物理B', '14', '7', '8', '3', '3', '16', '35-401', '盛建军');
 INSERT INTO `1704091` VALUES ('8', '大学物理B', '8', '1', '2', '4', '11', '14', '37-602', '孙赟');
 INSERT INTO `1704091` VALUES ('9', '大学物理B', '10', '3', '4', '4', '11', '14', '37-602', '孙赟');
-INSERT INTO `1704091` VALUES ('10', '电路与数字系统I', '14', '5', '6', '4', '3', '18', '41-2JT', '刘振华');
+INSERT INTO `1704091` VALUES ('10', '电路与数字系统I', '14', '5', '6', '4', '3', '18', '35-212', '吴剑威');
 INSERT INTO `1704091` VALUES ('11', '离散结构', '8', '1', '2', '5', '3', '18', '35-403', '华珊珊');
 INSERT INTO `1704091` VALUES ('12', '数据结构与算法', '10', '3', '4', '5', '4', '10', '36-606', '李红');
 INSERT INTO `1704091` VALUES ('13', '数据结构与算法', '10', '3', '4', '5', '12', '13', '36-606', '李红');
@@ -842,10 +842,10 @@ INSERT INTO `1704092` VALUES ('8', '电路与模拟电子技术实验', '8', '1'
 INSERT INTO `1704092` VALUES ('9', '大学物理B', '14', '5', '6', '3', '3', '16', '35-401', '盛建军');
 INSERT INTO `1704092` VALUES ('10', '大学物理B', '8', '1', '2', '4', '11', '14', '37-603', '朱守金');
 INSERT INTO `1704092` VALUES ('11', '大学物理B', '10', '3', '4', '4', '11', '14', '37-603', '朱守金');
-INSERT INTO `1704092` VALUES ('12', '电路与数字系统I', '14', '5', '6', '4', '3', '18', '41-2JT', '刘振华');
+INSERT INTO `1704092` VALUES ('12', '电路与数字系统I', '14', '5', '6', '2', '3', '18', '35-212', '吴剑威');
 INSERT INTO `1704092` VALUES ('13', '离散结构', '8', '1', '2', '5', '3', '18', '35-403', '华珊珊');
 INSERT INTO `1704092` VALUES ('14', '离散结构', '10', '3', '4', '5', '15', '18', '36-603', '华珊珊');
-INSERT INTO `1704092` VALUES ('15', '数据结构与算法', '14', '5', '6', '5', '3', '18', '36-201', '李红');
+INSERT INTO `1704092` VALUES ('15', '数据结构与算法', '10', '3', '4', '1', '3', '18', '36-201', '李红');
 INSERT INTO `1704092` VALUES ('16', '中国近现代史纲要', '16', '7', '8', '5', '3', '19', '36-1JT', '蔡传斌');
 
 -- ----------------------------
@@ -1107,14 +1107,14 @@ INSERT INTO `1804031` VALUES ('13', '工程应用数学A', '16', '7', '8', '3', 
 INSERT INTO `1804031` VALUES ('14', '计算机基础实践', '8', '1', '2', '4', '15', '19', '36-506', '沈亦军');
 INSERT INTO `1804031` VALUES ('15', '工程应用数学C', '10', '3', '4', '4', '6', '17', '37-3jt', '王玉');
 INSERT INTO `1804031` VALUES ('16', '程序设计语言I', '16', '7', '8', '4', '13', '18', '36-503', '周艳玲');
-INSERT INTO `1804031` VALUES ('17', '程序设计语言I', '16', '7', null, '4', '19', null, '36-503', '周艳玲');
+INSERT INTO `1804031` VALUES ('17', '程序设计语言I', '16', '7', '7', '4', '19', '19', '36-503', '周艳玲');
 INSERT INTO `1804031` VALUES ('18', '大学生心理健康教育', '16', '7', '8', '4', '6', '12', '36-3jt', '谢琛');
-INSERT INTO `1804031` VALUES ('19', '程序设计语言I', '10', '3', '4', '5', '12', null, '36-501', '周艳玲');
+INSERT INTO `1804031` VALUES ('19', '程序设计语言I', '10', '3', '4', '5', '12', '12', '36-501', '周艳玲');
 INSERT INTO `1804031` VALUES ('20', '程序设计语言I', '10', '3', '4', '5', '9', '11', '36-2jt', '周艳玲');
 INSERT INTO `1804031` VALUES ('21', ' 大学生职业生涯规划', '14', '5', '6', '5', '17', '19', '36-3jt', '王桂云');
 INSERT INTO `1804031` VALUES ('22', '思想道德修养与法律基础', '14', '5', '6', '5', '6', '16', '37-2jt', '王霞');
 INSERT INTO `1804031` VALUES ('23', '程序设计语言I', '16', '7', '8', '5', '10', '19', '36-503', '周艳玲');
-INSERT INTO `1804031` VALUES ('24', '专业导论', '16', '7', '8', '5', '8', null, '36-3jt', '郭昌建');
+INSERT INTO `1804031` VALUES ('24', '专业导论', '16', '7', '8', '5', '8', '8', '36-3jt', '郭昌建');
 INSERT INTO `1804031` VALUES ('25', '工程应用数学A', '10', '3', '4', '6', '6', '18', '36-201', '魏先彪');
 INSERT INTO `1804031` VALUES ('26', '程序设计语言I', '10', '3', '4', '5', '13', '19', '36-2jt', '周艳玲');
 
@@ -1154,14 +1154,14 @@ INSERT INTO `1804032` VALUES ('12', '程序设计语言I', '14', '5', '6', '3', 
 INSERT INTO `1804032` VALUES ('13', '工程应用数学A', '16', '7', '8', '3', '6', '18', '36-201', '魏先彪');
 INSERT INTO `1804032` VALUES ('14', '大学英语Ⅰ模块', '10', '3', '4', '4', '6', '18', '35-508', '汪武');
 INSERT INTO `1804032` VALUES ('15', '程序设计语言I', '14', '5', '6', '4', '12', '18', '36-503', '周艳玲');
-INSERT INTO `1804032` VALUES ('16', '程序设计语言I', '14', '5', null, '4', '19', null, '36-503', '周艳玲');
+INSERT INTO `1804032` VALUES ('16', '程序设计语言I', '14', '5', '5', '4', '19', '19', '36-503', '周艳玲');
 INSERT INTO `1804032` VALUES ('17', '计算机基础实践', '16', '7', '8', '4', '15', '19', '36-506', '沈亦军');
 INSERT INTO `1804032` VALUES ('18', '大学生心理健康教育', '16', '7', '8', '4', '6', '12', '36-3jt', '谢琛');
 INSERT INTO `1804032` VALUES ('19', '工程应用数学C', '8', '1', '2', '5', '6', '17', '35101', '数理待定');
 INSERT INTO `1804032` VALUES ('20', '程序设计语言I', '10', '3', '4', '5', '9', '11', '36-2jt', '周艳玲');
 INSERT INTO `1804032` VALUES ('21', '大学生职业生涯规划', '14', '5', '6', '5', '17', '19', '36-3jt', '王桂云');
 INSERT INTO `1804032` VALUES ('22', '思想道德修养与法律基础', '14', '5', '6', '5', '6', '16', '37-2jt', '王霞');
-INSERT INTO `1804032` VALUES ('23', '专业导论', '16', '7', '8', '5', '8', null, '36-3jt', '郭昌建');
+INSERT INTO `1804032` VALUES ('23', '专业导论', '16', '7', '8', '5', '8', '8', '36-3jt', '郭昌建');
 INSERT INTO `1804032` VALUES ('24', '工程应用数学A', '10', '3', '4', '6', '6', '18', '36-201', '魏先彪');
 INSERT INTO `1804032` VALUES ('25', '程序设计语言I', '10', '3', '4', '5', '13', '19', '36-2jt', '周艳玲');
 
@@ -1190,24 +1190,24 @@ INSERT INTO `1804081` VALUES ('1', '数字电子技术试验', '8', '1', '2', '1
 INSERT INTO `1804081` VALUES ('2', '数字逻辑', '8', '1', '2', '1', '2', '7', '36-204', '吴剑威');
 INSERT INTO `1804081` VALUES ('3', '数据库原理与应用', '10', '3', '4', '1', '10', null, '36-401', '刘登胜');
 INSERT INTO `1804081` VALUES ('4', '数字逻辑', '10', '3', '4', '1', '11', '13', '35-212', '吴剑威');
-INSERT INTO `1804081` VALUES ('5', '数字逻辑', '10', '3', '4', '1', '9', null, '36-210', '吴剑威');
+INSERT INTO `1804081` VALUES ('5', '数字逻辑', '10', '3', '4', '1', '9', '9', '36-210', '吴剑威');
 INSERT INTO `1804081` VALUES ('6', ' 离散数学', '14', '5', '6', '1', '2', '15', '36-204', '邹乐');
 INSERT INTO `1804081` VALUES ('7', '数据库原理与应用', '16', '7', '8', '1', '9', '17', '35-204', '刘登胜');
-INSERT INTO `1804081` VALUES ('8', '数据库原理与应用', '9', '2', null, '2', '18', null, '36-401', '刘登胜');
+INSERT INTO `1804081` VALUES ('8', '数据库原理与应用', '9', '2', '2', '2', '18', '18', '36-401', '刘登胜');
 INSERT INTO `1804081` VALUES ('9', '数据结构与算法', '8', '1', '2', '2', '2', '17', '36-204', '程知');
-INSERT INTO `1804081` VALUES ('10', '数据库原理与应用', '10', '3', '4', '2', '18', null, '36-401', '刘登胜');
+INSERT INTO `1804081` VALUES ('10', '数据库原理与应用', '10', '3', '4', '2', '18', '18', '36-401', '刘登胜');
 INSERT INTO `1804081` VALUES ('11', '计算机网络基础', '10', '3', '4', '2', '2', '11', '36-206', '马婷婷');
 INSERT INTO `1804081` VALUES ('12', '程序设计语言Ⅱ', '16', '7', '8', '2', '2', '10', '35-204', '邵安贤');
-INSERT INTO `1804081` VALUES ('13', '计算机网络基础', '8', '1', '2', '3', '10', null, '36-403', '马婷婷');
+INSERT INTO `1804081` VALUES ('13', '计算机网络基础', '8', '1', '2', '3', '10', '10', '36-403', '马婷婷');
 INSERT INTO `1804081` VALUES ('14', '数据结构与算法', '8', '1', '2', '3', '3', '7', '36-408', '程知');
 INSERT INTO `1804081` VALUES ('15', '计算机网络基础', '10', '3', '4', '3', '10', '11', '35-204', '马婷婷');
-INSERT INTO `1804081` VALUES ('16', '计算机网络基础', '10', '3', '4', '3', '12', null, '36-204', '马婷婷');
+INSERT INTO `1804081` VALUES ('16', '计算机网络基础', '10', '3', '4', '3', '12', '12', '36-204', '马婷婷');
 INSERT INTO `1804081` VALUES ('17', '离散数学', '14', '5', '6', '3', '2', '15', '35-204', '邹乐');
 INSERT INTO `1804081` VALUES ('18', '数字逻辑', '16', '7', '8', '3', '2', '9', '35-204', '吴剑威');
 INSERT INTO `1804081` VALUES ('19', '程序设计语言Ⅱ', '8', '1', '2', '4', '4', '10', '36-408', '吴剑威');
 INSERT INTO `1804081` VALUES ('20', '大学英语Ⅰ', '10', '3', '4', '4', '3', '15', '35-507', '王玉芳');
-INSERT INTO `1804081` VALUES ('21', '程序设计语言Ⅱ', '14', '5', null, '4', '10', null, '35-204', '邵安贤');
-INSERT INTO `1804081` VALUES ('22', '数据库原理与应用', '14', '5', '6', '4', '11', null, '36-401', '刘登胜');
+INSERT INTO `1804081` VALUES ('21', '程序设计语言Ⅱ', '14', '5', '5', '4', '10', '10', '35-204', '邵安贤');
+INSERT INTO `1804081` VALUES ('22', '数据库原理与应用', '14', '5', '6', '4', '11', '11', '36-401', '刘登胜');
 INSERT INTO `1804081` VALUES ('23', '程序设计语言Ⅱ', '14', '5', '6', '4', '2', '9', '36-210', '邵安贤');
 INSERT INTO `1804081` VALUES ('24', '计算机网络基础', '16', '7', '8', '4', '2', '11', '35-204', '马婷婷');
 INSERT INTO `1804081` VALUES ('25', '数据结构与算法', '8', '1', '2', '5', '2', '17', '35-204', '程知');
@@ -1215,9 +1215,9 @@ INSERT INTO `1804081` VALUES ('26', '数据库原理与应用', '10', '3', '4', 
 INSERT INTO `1804081` VALUES ('27', '大学英语Ⅰ', '14', '5', '6', '5', '3', '13', '35-204', '王玉芳');
 INSERT INTO `1804081` VALUES ('28', '数据库原理与应用', '16', '7', '8', '5', '9', '16', '36-201', '王玉芳');
 INSERT INTO `1804081` VALUES ('29', '数据结构与算法', '8', '1', '2', '3', '11', '17', '36-403', '马婷婷');
-INSERT INTO `1804081` VALUES ('30', '计算机网络基础', '10', '3', '4', '3', '8', null, '36-403', '马婷婷');
+INSERT INTO `1804081` VALUES ('30', '计算机网络基础', '10', '3', '4', '3', '8', '8', '36-403', '马婷婷');
 INSERT INTO `1804081` VALUES ('31', '数字逻辑', '16', '7', '8', '3', '11', '13', '35-201', '吴剑威');
-INSERT INTO `1804081` VALUES ('32', '大学英语Ⅰ', '10', '3', null, '4', '16', null, '35-507', '王玉芳');
+INSERT INTO `1804081` VALUES ('32', '大学英语Ⅰ', '10', '3', '3', '4', '16', '16', '35-507', '王玉芳');
 
 -- ----------------------------
 -- Table structure for 1804091
@@ -1280,7 +1280,7 @@ CREATE TABLE `1804092` (
   `place` varchar(255) DEFAULT NULL,
   `teacher` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ctid`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of 1804092
@@ -1326,7 +1326,7 @@ CREATE TABLE `1804093` (
   `place` varchar(255) DEFAULT NULL,
   `teacher` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ctid`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of 1804093
@@ -1498,13 +1498,13 @@ INSERT INTO `ClassIndex` VALUES ('1604011', '16计科1');
 INSERT INTO `ClassIndex` VALUES ('1604012', '16计科2');
 INSERT INTO `ClassIndex` VALUES ('1604031', '16网络工程1');
 INSERT INTO `ClassIndex` VALUES ('1604032', '16网络工程2');
+INSERT INTO `ClassIndex` VALUES ('1604091', '16软件工程1');
 INSERT INTO `ClassIndex` VALUES ('1604092', '16软件工程2');
 INSERT INTO `ClassIndex` VALUES ('1604093', '16软件工程3');
-INSERT INTO `ClassIndex` VALUES ('1604094', '16软件工程1');
 INSERT INTO `ClassIndex` VALUES ('1604101', '16信息安全与管理1');
 INSERT INTO `ClassIndex` VALUES ('1704011', '17计科1');
 INSERT INTO `ClassIndex` VALUES ('1704012', '17计科2');
-INSERT INTO `ClassIndex` VALUES ('1704031', '17网络安全');
+INSERT INTO `ClassIndex` VALUES ('1704031', '17网络工程');
 INSERT INTO `ClassIndex` VALUES ('1704081', '17计科专升本');
 INSERT INTO `ClassIndex` VALUES ('1704091', '17软件工程1');
 INSERT INTO `ClassIndex` VALUES ('1704092', '17软件工程2');
@@ -1529,13 +1529,23 @@ INSERT INTO `ClassIndex` VALUES ('1804111', '18计科2+3');
 DROP TABLE IF EXISTS `RegisteredLog`;
 CREATE TABLE `RegisteredLog` (
   `stuID` int(11) NOT NULL,
-  `regTime` datetime NOT NULL,
-  PRIMARY KEY (`stuID`)
+  `regTime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of RegisteredLog
 -- ----------------------------
+INSERT INTO `RegisteredLog` VALUES ('1604092040', '2018-09-17 14:02:15');
+INSERT INTO `RegisteredLog` VALUES ('1604093017', '2018-09-17 13:28:42');
+INSERT INTO `RegisteredLog` VALUES ('1604093038', '2018-09-17 13:33:18');
+INSERT INTO `RegisteredLog` VALUES ('1604093017', '2018-09-17 22:03:59');
+INSERT INTO `RegisteredLog` VALUES ('1604093014', '2018-09-17 22:08:09');
+INSERT INTO `RegisteredLog` VALUES ('1704011031', '2018-09-18 08:54:53');
+INSERT INTO `RegisteredLog` VALUES ('1704011031', '2018-09-18 08:55:22');
+INSERT INTO `RegisteredLog` VALUES ('1604092009', '2018-09-18 08:59:48');
+INSERT INTO `RegisteredLog` VALUES ('1704011039', '2018-09-18 09:08:40');
+INSERT INTO `RegisteredLog` VALUES ('1704031045', '2018-09-18 13:56:19');
+INSERT INTO `RegisteredLog` VALUES ('1704031017', '2018-09-18 13:57:03');
 
 -- ----------------------------
 -- Table structure for stuUser
@@ -1545,11 +1555,18 @@ CREATE TABLE `stuUser` (
   `stuID` int(11) NOT NULL,
   `stuName` varchar(255) NOT NULL,
   `stuClass` varchar(255) NOT NULL,
-  `stuOpenID` varchar(50) NOT NULL,
-  PRIMARY KEY (`stuID`)
+  `stuOpenID` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of stuUser
 -- ----------------------------
-INSERT INTO `stuUser` VALUES ('1604093017', '张泽鑫', '160409', 'oCXY51fO-sUyP-sQQLXbBlcxLR28');
+INSERT INTO `stuUser` VALUES ('1604092040', '章诚', '1604092', 'oCXY51VzdhXBLhEUwdNwkl57G4_o');
+INSERT INTO `stuUser` VALUES ('1604093038', '吴慧珠', '1604093', 'oCXY51Zfu_VXXIwpLgc1V2V5xUUw');
+INSERT INTO `stuUser` VALUES ('1604093017', '泽鑫', '1604093', 'oCXY51fO-sUyP-sQQLXbBlcxLR28');
+INSERT INTO `stuUser` VALUES ('1604093014', '赵世光', '1604093', 'oCXY51fib0TxeCOmwhWPNqO7vjGU');
+INSERT INTO `stuUser` VALUES ('1704011031', '孙强', '1704011', 'oCXY51SyAAgPhsV1bho_Locwcd78');
+INSERT INTO `stuUser` VALUES ('1604092009', '刘学坤', '1604092', 'oCXY51Z0hesntyXJJ-rQaV7oXKsw');
+INSERT INTO `stuUser` VALUES ('1704011039', '李欣桐', '1704011', 'oCXY51bPj5AUrQHzxbi2jc-xHiSI');
+INSERT INTO `stuUser` VALUES ('1704031045', '廖珺毓', '1704031', 'oCXY51b8h0UlvJT-P0G-twr3PB04');
+INSERT INTO `stuUser` VALUES ('1704031017', '郑禹明', '1704031', 'oCXY51XQGb388M6eARWKdml6tEBc');
